@@ -1,0 +1,6 @@
+from pymongo import MongoClient
+conn = MongoClient()
+db = conn.zipping
+collection=db.address
+inserting_element={"_id":{"$oid":"55dc5f1324d0e7a01fc76bd4"},"address":{"countrycode":"IN","establishment":"","landmark":"","locality":"Hyderabad, R.R. District","postal_code":"500081","state_country":"Telangana, India","sublocality":"100 Feet Road, Mega Hills, Madhapur","user_aptnum":"","user_buildingname":"","zp_v":"2"},"address_v3":{"city":"Hyderabad","country":"India","countrycode":"IN","establishment":"","landmark":"","locality":"","postal_code":"500081","state":"Telangana","sublocality":"100 Feet Road, Mega Hills, Madhapur","user_aptnum":"","user_buildingname":"","zp_v":"3"},"assumed_type":"Home","countrycode":"IN","createdAt":{"$date":"2015-05-14T09:38:18.737Z"},"location":{"coordinates":[78.39072715491056,17.4525649206018],"type":"Point"},"map_info":{"map_type":"1","zoom":"17"},"title":"Home","updatedAt":{"$date":"2015-05-14T09:38:18.737Z"},"user_objectid":"3TdGSv3S07","version":"0.1","zippr":"VQKX8164","zp_type":"2","zp_url":"http://staging.zip.pr/IN/VQKX8164"}
+collection.insert(inserting_element)
